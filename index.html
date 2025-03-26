@@ -50,18 +50,6 @@
             font-size: 1.2em;
         }
 
-        #countdown {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-size: 1em;
-            z-index: 3;
-        }
-
         nav {
             background-color: #b33131;
             padding: 10px;
@@ -80,6 +68,7 @@
         nav a:hover {
             text-decoration: underline;
         }
+
         .dropdown {
             position: relative;
             display: inline-block;
@@ -123,6 +112,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         section img {
             max-width: 500px;
             border-radius: 8px;
@@ -164,7 +154,6 @@
 </head>
 <body>
     <header>
-        <div id="countdown">Loading...</div>
         <h1>Rato Bangala MUN</h1>
         <p>Empowering Youth Leaders for a Better Tomorrow</p>
         <p><b>Theme: </b>Conflict prevention and peace building</p>
@@ -173,10 +162,21 @@
     <nav>
         <div class="dropdown">
             <a href="#about">About</a>
+            <div class="dropdown-content">
+                <a href="#">List of Committees</a>
+                <a href="#">Contact Email</a>
+                <a href="#">Phone Number</a>
+            </div>
         </div>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="dropdown">
+        <div class="dropdown">
+            <a href="#committees">Committees</a>
+            <div class="dropdown-content">
+                <a href="#">General Assembly</a>
+                <a href="#">Security Council</a>
+                <a href="#">WHO</a>
+            </div>
+        </div>
+        <div class="dropdown">
             <a href="#schedule">Schedule</a>
             <div class="dropdown-content">
                 <a href="#">Opening Ceremony</a>
@@ -186,31 +186,36 @@
         </div>
         <a href="#contact">Contact</a>
     </nav>
+
     <div class="container">
         <section id="about">
             <h2>About the MUN</h2>
             <p>The RBS Model United Nations (MUN) is an academic simulation of the United Nations where students debate global issues, draft resolutions, and develop diplomatic skills.</p>
+            <img src="aboutmun.jpeg" alt="MUN Conference">
         </section>
+
         <section id="committees">
             <h2>Committees</h2>
             <p>Explore various committees such as the General Assembly, Security Council, and DISEC to address pressing global issues.</p>
             <img src="muncommittee.png" alt="MUN Committees">
             <a href="#" class="button">Learn More</a>
         </section>
-            <section id="schedule">
+
+        <section id="schedule">
             <h2>Schedule</h2>
             <p>Stay updated with the conference schedule, including opening ceremonies, committee sessions, and socials.</p>
             <img src="schedule.jpg" alt="MUN Schedule">
         </section>
-            <section id="contact">
+
+        <section id="contact">
             <h2>Contact Us</h2>
             <p>Have questions? Reach out to our organizing committee at <a href="mailto:info@munconference.com">rbsmun@gmail.com</a>.</p>
         </section>
     </div>
-    <footer>
-        <p>&copy; 2025 RBS Model United Nations. All rights reserved. | <a href="#">Privacy Policy</a></p>
-    </footer>
 
+    <footer>
+        <p>&copy; 2025  RBS Model United Nations. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
     <script>
         function updateCountdown() {
             const targetDate = new Date("December 20, 2025 08:00:00").getTime();
