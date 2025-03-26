@@ -80,6 +80,35 @@
         nav a:hover {
             text-decoration: underline;
         }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
         .container {
             max-width: 1200px;
@@ -93,6 +122,43 @@
             background: rgb(180, 171, 171);
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section img {
+            max-width: 500px;
+            border-radius: 8px;
+            display: block; /* Centers the image */
+            margin: 0 auto; /* Ensures horizontal centering */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: rgb(255, 255, 255);
+            background-color: #bc2929;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .button:hover {
+            background-color: #bc2929;
+        }
+
+        footer {
+            background-color: #bc2929;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -110,14 +176,37 @@
         </div>
         <a href="#contact">Contact</a>
     </nav>
-
+    <div class="dropdown">
+            <a href="#schedule">Schedule</a>
+            <div class="dropdown-content">
+                <a href="#">Opening Ceremony</a>
+                <a href="#">Itinerary</a>
+                <a href="#">Closing Ceremony</a>
+            </div>
+        </div>
+        <a href="#contact">Contact</a>
+    </nav>
     <div class="container">
         <section id="about">
             <h2>About the MUN</h2>
             <p>The RBS Model United Nations (MUN) is an academic simulation of the United Nations where students debate global issues, draft resolutions, and develop diplomatic skills.</p>
         </section>
+        <section id="committees">
+            <h2>Committees</h2>
+            <p>Explore various committees such as the General Assembly, Security Council, and DISEC to address pressing global issues.</p>
+            <img src="muncommittee.png" alt="MUN Committees">
+            <a href="#" class="button">Learn More</a>
+        </section>
+            <section id="schedule">
+            <h2>Schedule</h2>
+            <p>Stay updated with the conference schedule, including opening ceremonies, committee sessions, and socials.</p>
+            <img src="schedule.jpg" alt="MUN Schedule">
+        </section>
+            <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions? Reach out to our organizing committee at <a href="mailto:info@munconference.com">rbsmun@gmail.com</a>.</p>
+        </section>
     </div>
-
     <footer>
         <p>&copy; 2025 RBS Model United Nations. All rights reserved. | <a href="#">Privacy Policy</a></p>
     </footer>
